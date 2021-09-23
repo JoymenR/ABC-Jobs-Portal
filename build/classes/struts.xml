@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+	"http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+	<package name="default" extends="struts-default">
+
+		<action name="employee"
+			class="com.lithan.action.RegisterAction">
+			<result name="backRegister">/register.jsp</result>
+			<result name="register">/thankyou.jsp</result>
+		</action>
+
+		<action name="loginprocess"
+			class="com.lithan.action.LoginAction">
+			<result name="success" type="chain">profile</result>
+			<result name="error">/login.jsp</result>
+		</action>
+
+		<action name="fsuccess" class="com.lithan.action.LoginAction"
+			method="logout">
+			<result name="fsuccess">/login.jsp</result>
+		</action>
+
+		<action name="logsuccess"
+			class="com.lithan.action.ProfileAction" method="logout">
+			<result name="logsuccess">/login.jsp</result>
+		</action>
+
+		<action name="profile" class="com.lithan.action.ProfileAction">
+			<result name="success">/userprofile.jsp</result>
+			<result name="error">/login.jsp</result>
+		</action>
+
+		<action name="update" class="com.lithan.action.ProfileAction">
+			<result name="success">/Edit.jsp</result>
+			<result name="error">/userprofile.jsp</result>
+		</action>
+
+		<action name="updatedetails"
+			class="com.lithan.action.EditAction">
+			<result name="success" type="chain">LatestProfile</result>
+		</action>
+
+		<action name="LatestProfile"
+			class="com.lithan.action.ProfileAction">
+			<result name="success">/userprofile.jsp</result>
+			<result name="error">/userprofile.jsp</result>
+		</action>
+
+		<action name="otpverify"
+			class="com.lithan.action.ForgotOtpAction">
+			<result name="OtpProcess">forgot3.jsp</result>
+			<result name="error">forgot2.jsp</result>
+		</action>
+
+		<action name="sndemail"
+			class="com.lithan.action.ForgotMailAction">
+			<result name="success">forgot2.jsp</result>
+			<result name="error">forgot.jsp</result>
+		</action>
+
+		<action name="UpdatePass"
+			class="com.lithan.action.ForgotUpdateAction">
+			<result name="updatepass">forgot4.jsp</result>
+		</action>
+
+		<action name="loginuser"
+			class="com.lithan.action.AdminloginAction">
+			<result name="login" type="redirectAction">report</result>
+			<result name="backLogin">/adminlogin.jsp</result>
+		</action>
+
+		<action name="alogout"
+			class="com.lithan.action.AdminloginAction" method="logout">
+			<result name="alogout">/adminlogin.jsp</result>
+		</action>
+
+		<action name="report" class="com.lithan.action.ReportAction">
+			<result name="REPORT">/adminreport.jsp</result>
+			<result name="admerror">/adminlogin.jsp</result>
+		</action>
+
+		<action name="deleterecord"
+			class="com.lithan.action.DeleteAction">
+			<result name="DELETE" type="redirectAction">report</result>
+		</action>
+
+		<action name="SearchUser"
+			class="com.lithan.action.SearchUserAction">
+			<result name="successful">searchresult.jsp</result>
+			<result name="error">SearchUser.jsp</result>
+		</action>
+
+		<action name="FullProfile"
+			class="com.lithan.action.SearchUserAction" method="fullprofile">
+			<result name="REPORTS">publicprofile.jsp</result>
+		</action>
+
+	</package>
+
+</struts>  
