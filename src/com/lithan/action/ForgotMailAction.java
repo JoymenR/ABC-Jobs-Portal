@@ -66,13 +66,13 @@ public class ForgotMailAction extends ActionSupport implements SessionAware{
 	    			Session session = Session.getDefaultInstance(props, new javax.mail.Authenticator() {
 	    			protected PasswordAuthentication getPasswordAuthentication() 
 	    			{
-	    			return new PasswordAuthentication("abcjobsproject@gmail.com","tphf5425");
+	    			return new PasswordAuthentication("Your-Email","Your-Password");
 	    			}
 	    			});
 	    			
 	    			try {
 	    				MimeMessage message = new MimeMessage(session);
-	    				message.setFrom(new InternetAddress("abcjobsproject@gmail.com"));
+	    				message.setFrom(new InternetAddress("Your Email"));
 	    				message.addRecipient(Message.RecipientType.TO,new InternetAddress(to));
 	    				message.setSubject("OTP Verification");
 	    				message.setText("The OTP to change Your ABC Jobs Password is  " + otp);
