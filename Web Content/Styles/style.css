@@ -1,0 +1,143 @@
+
+
+body,h1,h2,h3,p,td,quote,small,form,input,ul,li,ol,label{
+	margin:0px;
+	padding:0px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+	margin-top:20px;
+	color:#51555C;
+	font-size:18px;
+	background-image: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
+      background-attachment: fixed;
+	text-align:center;
+}
+
+.clear{
+	clear:both;
+}
+
+
+a:hover{
+	text-decoration:none;
+}
+
+
+.container{
+	background-color:#FFFFFF;
+}
+
+
+.conn{
+
+        margin-top:20px;
+      padding:10px;
+      font-size: 20px;
+
+}
+
+
+.dca
+{
+
+      border-radius: 10px;
+      background-color:#FFFFFF;
+      padding:10px 20px 20px 20px;
+      width:1300px;
+      margin:20px auto;
+      text-align:left;
+}
+
+h1{
+	font-size:28px;
+	font-weight:bold;
+	font-family:"Trebuchet MS",Arial, Helvetica, sans-serif;
+}
+
+h2{
+	font-size:20px;
+	font-weight:bold;
+	color:black;
+}
+
+
+
+
+
+ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      background:#333;
+      position: relative;
+
+}
+
+ul li {
+      display: inline-block;
+}
+
+ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 15px;
+      display: block;
+}
+
+ul li:hover {
+      background: grey;
+}
+
+ul ul {
+      position: absolute;
+      min-width: 200px;
+      background: lightgrey;
+      display: none;
+}
+
+ul ul li {
+      display: block;
+      background: #333;
+}
+
+ul li:hover ul {
+      display: block;
+}
+
+ul li i {
+      color: white;
+      float: right;
+      padding-left: 20px;
+}
+
+nav div {
+      background: blue;
+      color: blue;
+      font-size: 24px;
+      padding: 0.6em;
+      cursor: pointer;
+      display: none;
+}
+
+@media(max-width: 768px) {
+      nav div {
+            display: block;
+      }
+
+      ul {
+            display: none;
+            position: static;
+            background: blue;
+      }
+
+      ul li {
+            display: block;
+      }
+
+      ul ul {
+            position: static;
+            background: blue;
+      }
+}

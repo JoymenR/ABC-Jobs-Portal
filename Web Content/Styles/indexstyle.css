@@ -1,0 +1,122 @@
+
+		.query{
+  background-color: white;
+  color:black;
+  font-family: arial;
+  font-size: 18px;
+  text-align: center;
+  padding:45px 10px 0px 0px;
+
+
+}
+	#thanks{
+			text-align:center;
+			font-size:20px;
+			
+	}
+
+ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      background:#333;
+      position: relative;
+
+}
+
+ul li {
+      display: inline-block;
+}
+
+ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 15px;
+      display: block;
+}
+
+ul li:hover {
+      background: grey;
+}
+
+ul ul {
+      position: absolute;
+      min-width: 200px;
+      background: lightgrey;
+      display: none;
+}
+
+ul ul li {
+      display: block;
+      background: #333;
+}
+
+ul li:hover ul {
+      display: block;
+}
+
+ul li i {
+      color: white;
+      float: right;
+      padding-left: 20px;
+}
+
+nav div {
+      background: blue;
+      color: blue;
+      font-size: 24px;
+      padding: 0.6em;
+      cursor: pointer;
+      display: none;
+}
+
+@media(max-width: 768px) {
+      nav div {
+            display: block;
+      }
+
+      ul {
+            display: none;
+            position: static;
+            background: blue;
+      }
+
+      ul li {
+            display: block;
+      }
+
+      ul ul {
+            position: static;
+            background: blue;
+      }
+}
+
+	.navbar {
+      overflow: hidden;
+      background-color: #333;}
+
+    .navbar a {
+      float: left;
+      display:block;
+      color: white;
+      text-align: center;
+      padding: 14px 15px;
+      text-decoration: none;}
+
+    .navbar a:hover {
+      background-color: #ddd;
+      color: black;}
+
+        .footimg{
+    height:50px ;
+    width:50px; 
+  }
+
+
+   .foot {
+          left: 0;
+          bottom: 0;
+          background-color: black;
+          color:white;
+          text-align: center;
+      }
